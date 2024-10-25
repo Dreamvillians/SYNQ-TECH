@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="settings-page">
+    <h2 style="text-align: center;">Settings</h2>
+
+    <!-- NFC Toggle -->
+    <div class="setting-item">
+      <label>
+        <input type="checkbox" id="enable-nfc" checked />
+        Enable NFC Business Card
+      </label>
+    </div>
+
+    <!-- Update Password -->
+    <div class="setting-item">
+      <label for="new-password">New Password:</label>
+      <input type="password" id="new-password" placeholder="Enter new password" />
+    </div>
+    <div class="setting-item">
+      <label for="confirm-password">Confirm Password:</label>
+      <input type="password" id="confirm-password" placeholder="Confirm new password" />
+    </div>
+    <button id="update-password">Update Password</button>
+    <p id="password-status"></p>
+
+    <!-- Privacy Settings -->
+    <h3>Privacy Settings</h3>
+    <div class="setting-item">
+      <label>
+        <input type="checkbox" id="show-email" />
+        Show my email on profile
+      </label>
+    </div>
+    <div class="setting-item">
+      <label>
+        <input type="checkbox" id="show-phone" />
+        Show my phone number on profile
+      </label>
+    </div>
+
+    <button id="save-settings">Save Settings</button>
+    <p id="settings-status"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>

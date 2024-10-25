@@ -1,0 +1,48 @@
+/* Slide 109 (#1) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-109-1b700655"] */
+.slide[data-cid=slide-109-1b700655].whiteSlide .list-109 li::before {
+  background: #BBBBBB !important;
+  color: #fff !important;
+}
+.slide[data-cid=slide-109-1b700655].whiteSlide .list-109 li.active::before {
+  background: #4CAF50 !important;
+  color: #fff !important;
+}
+.slide[data-cid=slide-109-1b700655]:not(.whiteSlide) .list-109 li::before {
+  background: #fff !important;
+  color: #202020 !important;
+}
+.slide[data-cid=slide-109-1b700655]:not(.whiteSlide) .list-109 li.active::before {
+  background: #4CAF50 !important;
+  color: #fff !important;
+}
+.slide[data-cid=slide-109-1b700655] .list-109 {
+  counter-reset: num;
+}
+.slide[data-cid=slide-109-1b700655] .list-109 li {
+  position: relative;
+}
+.slide[data-cid=slide-109-1b700655] .list-109 li:before {
+  content: counter(num);
+  counter-increment: num;
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 40px;
+  letter-spacing: -0.015em;
+}
+.slide[data-cid=slide-109-1b700655] .list-109 li h4 {
+  line-height: 40px !important;
+}
+
+/* Example Recaptcha (#2) */
+#g-recaptcha-response.g-recaptcha-response {
+  display: none !important;
+}

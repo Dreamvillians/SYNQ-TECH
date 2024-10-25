@@ -1,0 +1,162 @@
+/* SIGN IN (#1) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-109-17374755"] */
+.slide[data-cid=slide-109-17374755].whiteSlide .list-109 li::before {
+  background: #BBBBBB !important;
+  color: #fff !important;
+}
+.slide[data-cid=slide-109-17374755].whiteSlide .list-109 li.active::before {
+  background: #4CAF50 !important;
+  color: #fff !important;
+}
+.slide[data-cid=slide-109-17374755]:not(.whiteSlide) .list-109 li::before {
+  background: #fff !important;
+  color: #202020 !important;
+}
+.slide[data-cid=slide-109-17374755]:not(.whiteSlide) .list-109 li.active::before {
+  background: #4CAF50 !important;
+  color: #fff !important;
+}
+.slide[data-cid=slide-109-17374755] .list-109 {
+  counter-reset: num;
+}
+.slide[data-cid=slide-109-17374755] .list-109 li {
+  position: relative;
+}
+.slide[data-cid=slide-109-17374755] .list-109 li:before {
+  content: counter(num);
+  counter-increment: num;
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 40px;
+  letter-spacing: -0.015em;
+}
+.slide[data-cid=slide-109-17374755] .list-109 li h4 {
+  line-height: 40px !important;
+}
+
+.social-sign-in {
+  margin-top: 20px;
+}
+
+.google-button, .linkedin-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.google-button img, .linkedin-button img {
+  margin-right: 10px;
+}
+
+.google-button {
+  background-color: white;
+}
+
+.linkedin-button {
+  background-color: white;
+}
+
+.google-button:hover, .linkedin-button:hover {
+  background-color: #f0f0f0;
+}
+
+p {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  /* Dark grey text */
+}
+
+.link {
+  color: #ff5733;
+  /* Orange link color */
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.password-container {
+  position: relative;
+  width: 100%;
+  /* Adjust width as needed */
+  max-width: 300px;
+  /* Optional: Limit the size */
+}
+
+input[type=password] {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.eye {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+  color: #666;
+}
+
+.eye:hover {
+  color: #333;
+}
+
+/* SIGN UP (#2) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-108-3155af7c"] */
+.slide[data-cid=slide-108-3155af7c] .step-number-108 {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slide[data-cid=slide-108-3155af7c].whiteSlide .step-number-108 {
+  background: #BBBBBB !important;
+}
+.slide[data-cid=slide-108-3155af7c].whiteSlide .step-number-108 h4 {
+  color: #fff !important;
+}
+.slide[data-cid=slide-108-3155af7c].whiteSlide .step-number-108.active {
+  background: #2671db !important;
+}
+.slide[data-cid=slide-108-3155af7c]:not(.whiteSlide) .step-number-108 {
+  background: #fff !important;
+}
+.slide[data-cid=slide-108-3155af7c]:not(.whiteSlide) .step-number-108 h4 {
+  color: #202020 !important;
+}
+.slide[data-cid=slide-108-3155af7c]:not(.whiteSlide) .step-number-108.active {
+  background: #2671db !important;
+}
+.slide[data-cid=slide-108-3155af7c]:not(.whiteSlide) .step-number-108.active h4 {
+  color: #fff !important;
+}
+@media (max-width: 767px) {
+  .slide[data-cid=slide-108-3155af7c] .step-number-108 {
+    height: 30px;
+    width: 30px;
+  }
+  .slide[data-cid=slide-108-3155af7c] .step-container-108 {
+    min-width: 180px;
+  }
+}

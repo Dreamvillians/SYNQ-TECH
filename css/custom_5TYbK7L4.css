@@ -1,0 +1,7 @@
+/* USER INTERFACE HOME (#1) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-49-95d17e55"] */
+.slide[data-cid=slide-49-95d17e55] .flex-49 .material-icons {
+  margin-bottom: 10px;
+  margin-top: 15px;
+  font-size: 72px;
+}

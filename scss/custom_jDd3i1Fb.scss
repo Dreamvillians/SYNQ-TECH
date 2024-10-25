@@ -1,0 +1,28 @@
+/* 
+Compile this file to css/custom_jDd3i1Fb.css using any SCSS preprocessor. 
+More information here: https://slides.gitbook.io/manual/scss
+*/
+
+@import "mixins.scss"; 
+@import "variables.scss";
+@import "variables-custom.scss";
+
+/* CREATE (#1) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-16-98bfc0ca"] */
+.slide[data-cid="slide-16-98bfc0ca"]{
+  @include media($tablet, max) {
+    .cell-16 {
+      padding-bottom: 35px;
+    }
+  }
+}
+
+/* GENERATES LEADS (#4) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-16-ae669abe"] */
+.slide[data-cid="slide-16-ae669abe"]{
+  @include media($tablet, max) {
+    .cell-16 {
+      padding-bottom: 35px;
+    }
+  }
+}

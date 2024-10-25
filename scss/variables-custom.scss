@@ -1,0 +1,14 @@
+$red: #f44336;
+$brown: #795548;
+$white: #ffffff;
+@include generateColors('white',$white);
+$blue: #2671db;
+$customBlueButton: #515776;
+@include generateColors('customBlueButton',$customBlueButton);
+$customBlue: #ebf3fe;
+@include generateColors('customBlue',$customBlue);
+$customBlueButton-2: #e9f4fe;
+@include generateColors('customBlueButton-2',$customBlueButton-2);
+$customBlue-2: #21334a;
+@include generateColors('customBlue-2',$customBlue-2);
+$orange: #bb561a;

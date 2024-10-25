@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Card Preview</title>
+  <meta property="og:title" content="Main page" />
+    <meta name="twitter:title" content="Main page" />
+    <meta name="description" content="This is the main (index) page of your project." />
+    <meta name="og:description" content="This is the main (index) page of your project." />
+    <meta name="twitter:description" content="This is the main (index) page of your project." />
+    <meta name="og:image" content="assets/uploads/synq-tech-black.jpg?p=eu3pl4hW" />
+    <meta name="twitter:image" content="assets/uploads/synq-tech-black.jpg?p=eu3pl4hW" />
+    <link rel="icon" sizes="any" href="assets/svg/favicon-default.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="css/slides-customized.min.css?p=eu3pl4hW&rnd=26129" rel="stylesheet" type="text/css" id="js-slides-css">
+
+    
+    <!-- Fonts and Material Icons -->
+    <link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css2?family=Material+Icons&display=swap" id="js-google-fonts" />
+    <style id="js-slides-fonts">
+        .slides { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; }
+    </style>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link href="css/swiper.min.css" rel="stylesheet" type="text/css">
+<link href="css/custom_5Hx3C0cw.css?p=eu3pl4hW&rnd=878998" rel="stylesheet" type="text/css">    
+    <link rel="preload" href="assets/svg/icon-set.svg?p=eu3pl4hW" as="image" type="image/svg+xml" crossorigin>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .preview-container {
+      display: flex;
+      max-width: 1000px;
+      width: 90%;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .details {
+      flex: 1;
+    }
+
+    .details h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #111;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .info-item:hover {
+      background-color: #333;
+    }
+
+    .social-links {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .social-links h2 {
+      margin-bottom: 10px;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    .social-icons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      justify-items: center;
+    }
+
+    .social-button {
+      background-color: #222;
+      border: none;
+      border-radius: 10px;
+      padding: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .social-button:hover {
+      background-color: #444;
+    }
+
+    .social-button svg {
+      width: 24px;
+      height: 24px;
+      fill: #fff;
+    }
+
+    .avatar {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .avatar img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #222;
+    }
+    .social-links {
+      text-align: center;
+    }
+
+    .social-links h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .social-button {
+      width: 60px;
+      height: 60px;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .social-button:hover {
+      transform: scale(1.1);
+    }
+
+    /* Specific Colors for Each Platform */
+    .facebook {
+      background-color: #1877F2;
+    }
+
+    .instagram {
+      background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf, #4f5bd5);
+    }
+
+    .linkedin {
+      background-color: #0A66C2;
+    }
+
+    .tiktok {
+      background-color: #4a4848;
+      
+    }
+
+    .website {
+      background-color: #444;
+    }
+
+    .social-button svg {
+      width: 30px;
+      height: 30px;
+      fill: #fff;
+    }
+  </style>
+</head>
+<body>
+  <nav class="sidebar" data-sidebar-id="1">
+    <div class="close"><svg><use href="assets/svg/icons.svg#close"></use></svg></div>
+    <div class="content">
+       <div class="center"><a class="button blue rounded small" href="login.html">LOGIN</a> <a class="button green rounded small" href="pricing.html">BUY CARD</a></div>
+      <ul class="mainMenu margin-top-3">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="how-it-works.html">HOW IT WORKS</a></li>
+        <li><a href="pricing.html">PRICING</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+      </ul>
+       <ul class="subMenu small opacity-8">
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">TERMS & CONDITIONS</a></li>
+        <li><a href="#">ABOUT US</a></li>
+       
+      </ul>
+      <ul class="social opacity-8">
+        <li><a href="#"><svg><use href="assets/svg/icons.svg#facebook"></use></svg></a></li>
+        <li><a href="#"><svg><use href="assets/svg/icons.svg#twitter"></use></svg></a></li>
+        <li><a href="#"><svg><use href="assets/svg/icons.svg#instagram"></use></svg></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  
+  <div class="preview-container">
+    <!-- Left Side: Details -->
+    <div class="details">
+      <h1>Preview Your NFC Business Card</h1>
+
+      <div class="info-item">
+        <span>👤 NAME</span>
+        <span>:</span>
+      </div>
+
+      <div class="info-item">
+        <span>💼 Job Title</span>
+        <span>:</span>
+      </div>
+
+      <div class="info-item">
+        <span>🏢 COMPANY NAME</span>
+        <span>:</span>
+      </div>
+
+      <div class="info-item">
+        <span>📞 PHONE</span>
+        <span>:</span>
+      </div>
+
+      <div class="info-item">
+        <span>✉️ EMAIL</span>
+        <span>:</span>
+      </div>
+
+      <div class="info-item">
+        <span>🌍 ABOUT ME</span>
+        <span>:</span>
+      </div>
+
+      <div class="social-links">
+        <h2>Your Social Links 👇</h2>
+        <div class="social-icons">
+          <!-- Facebook -->
+          <div class="social-button facebook">
+            <a href="https://www.facebook.com/@yourprofile" title="facebook" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M22.675 0H1.325C.594 0 0 .593 0 1.324v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.127V8.412c0-3.1 1.893-4.788 4.658-4.788 1.324 0 2.462.099 2.795.143v3.24l-1.917.001c-1.504 0-1.794.715-1.794 1.763v2.312h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.324-.593 1.324-1.325V1.325C24 .593 23.407 0 22.675 0z"/>
+            </svg>
+          </a>
+          </div>
+    
+          <!-- Instagram -->
+          <div class="social-button instagram">
+            <a href="https://www.instagram.com/@yourprofile" title="instagram" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+              </svg>           
+          </a>
+          </div>
+    
+          <!-- LinkedIn -->
+          <div class="social-button linkedin">
+            <a href="https://www.linkedin.com/@yourprofile" title="LinkedIn" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M22.23 0H1.77C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.77 24h20.46c.977 0 1.77-.774 1.77-1.729V1.729C24 .774 23.207 0 22.23 0zM7.088 20.452H3.543V9.045h3.545v11.407zM5.315 7.775c-1.148 0-2.078-.937-2.078-2.095 0-1.157.93-2.094 2.078-2.094 1.146 0 2.078.937 2.078 2.094 0 1.158-.932 2.095-2.078 2.095zM20.452 20.452h-3.545v-5.68c0-1.355-.026-3.103-1.891-3.103-1.892 0-2.182 1.476-2.182 2.994v5.789H9.636V9.045h3.4v1.561h.048c.474-.899 1.637-1.848 3.373-1.848 3.607 0 4.272 2.373 4.272 5.463v6.231z"/>
+            </svg>
+          </a>
+          </div>
+
+          <!-- Tik-tok -->
+          <div class="social-button tiktok">
+            <a href="https://www.tiktok.com/@yourprofile" title="TikTok" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+                <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+              </svg>
+            </a>
+          </div>
+          
+           <!-- Website -->
+           <div class="social-button website">
+            <a href="https://www.website.com/" title="website" target="_blank"></a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-browser-edge" viewBox="0 0 16 16">
+              <path d="M9.482 9.341c-.069.062-.17.153-.17.309 0 .162.107.325.3.456.877.613 2.521.54 2.592.538h.002c.667 0 1.32-.18 1.894-.519A3.84 3.84 0 0 0 16 6.819c.018-1.316-.44-2.218-.666-2.664l-.04-.08C13.963 1.487 11.106 0 8 0A8 8 0 0 0 .473 5.29C1.488 4.048 3.183 3.262 5 3.262c2.83 0 5.01 1.885 5.01 4.797h-.004v.002c0 .338-.168.832-.487 1.244l.006-.006z"/>
+              <path d="M.01 7.753a8.14 8.14 0 0 0 .753 3.641 8 8 0 0 0 6.495 4.564 5 5 0 0 1-.785-.377h-.01l-.12-.075a5.5 5.5 0 0 1-1.56-1.463A5.543 5.543 0 0 1 6.81 5.8l.01-.004.025-.012c.208-.098.62-.292 1.167-.285q.194.001.384.033a4 4 0 0 0-.993-.698l-.01-.005C6.348 4.282 5.199 4.263 5 4.263c-2.44 0-4.824 1.634-4.99 3.49m10.263 7.912q.133-.04.265-.084-.153.047-.307.086z"/>
+              <path d="M10.228 15.667a5 5 0 0 0 .303-.086l.082-.025a8.02 8.02 0 0 0 4.162-3.3.25.25 0 0 0-.331-.35q-.322.168-.663.294a6.4 6.4 0 0 1-2.243.4c-2.957 0-5.532-2.031-5.532-4.644q.003-.203.046-.399a4.54 4.54 0 0 0-.46 5.898l.003.005c.315.441.707.821 1.158 1.121h.003l.144.09c.877.55 1.721 1.078 3.328.996"/>
+            </svg>
+          </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side: Avatar -->
+    <div class="avatar">
+      <img src="https://via.placeholder.com/300" alt="Avatar">
+    </div>
+  </div>
+
+</body>
+</html>

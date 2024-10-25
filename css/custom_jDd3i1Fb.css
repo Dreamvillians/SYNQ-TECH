@@ -1,0 +1,15 @@
+/* CREATE (#1) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-16-98bfc0ca"] */
+@media (max-width: 1023px) {
+  .slide[data-cid=slide-16-98bfc0ca] .cell-16 {
+    padding-bottom: 35px;
+  }
+}
+
+/* GENERATES LEADS (#4) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-16-ae669abe"] */
+@media (max-width: 1023px) {
+  .slide[data-cid=slide-16-ae669abe] .cell-16 {
+    padding-bottom: 35px;
+  }
+}

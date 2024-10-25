@@ -1,0 +1,282 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile and Business Links</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100%; /* Ensure it fills the screen */
+      margin: 0;
+      box-sizing: border-box;
+      
+    }
+
+    .container {
+      width: 400px;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      font-weight: 300;
+    }
+
+    .profile-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .photo-wrapper {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .photo-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.2s ease;
+    }
+
+    .upload-btn {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 50%;
+      padding: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .upload-btn svg {
+      fill: white;
+    }
+
+    .zoom-controls {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .zoom-controls button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .input-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .input {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid #444;
+      border-radius: 5px;
+      background-color: #222;
+      color: white;
+    }
+
+    .input-group-single {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px;
+      border: 1px solid #444;
+      border-radius: 5px;
+      background-color: #222;
+      margin-bottom: 15px;
+    }
+
+    .input-group-single input {
+      flex: 1;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: white;
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      fill: white;
+    }
+    .serve-button {
+      background-color: #007bff;
+      border: none;
+      border-radius: 25px;
+      padding: 15px 30px;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px; /* Spacing between icon and text */
+      transition: background-color 0.3s, transform 0.2s;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .serve-button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    .serve-button:active {
+      background-color: #003d7a;
+      transform: scale(0.95);
+      
+    }
+
+    .serve-icon {
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
+    .button-container
+    {
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile-container">
+      <h1>Edit Profile</h1>
+      <h2>Upload Profile Picture:</h2>
+      <div class="photo-wrapper">
+        
+        <img id="profileImage" src="https://via.placeholder.com/150" alt="Profile Photo" />
+        <input type="file" id="uploadInput" style="display: none" accept="image/*" />
+        <button class="upload-btn" onclick="document.getElementById('uploadInput').click()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4C9.243 4 7 6.243 7 9s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5zm0-2a7 7 0 100 14 7 7 0 000-14zm-1 8h2v2h-2V8zm2-3h-2v1h2V5zm4 10h-2v3H7v-3H5v5h14v-5h-3z" />
+          </svg>
+        </button>
+      </div>
+      <div class="zoom-controls">
+        <button onclick="zoomImage(-0.1)">-</button>
+        <button onclick="zoomImage(0.1)">+</button>
+      </div>
+    </div>
+
+    <div class="input-group">
+      <input class="input" type="text" placeholder="First Name">
+      <input class="input" type="text" placeholder="Last Name">
+    </div>
+    <div class="input-group">
+      <input class="input" type="text" placeholder="Job Title">
+      <input class="input" type="text" placeholder="Company Name">
+    </div>
+    <div class="input-group-single">
+      <input type="tel" placeholder="(+27)-68-345-2454">
+    </div>
+    <div class="input-group-single">    
+      <input type="email" placeholder="Email address">
+    </div>
+    <div class="input-group-single">    
+      <input type="text" placeholder="ABOUT">
+    </div>
+    <h1 style="text-align: center;">Manage Business Links</h1>
+
+    <div class="input-group-single">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-browser-edge" viewBox="0 0 16 16">
+        <path d="M9.482 9.341c-.069.062-.17.153-.17.309 0 .162.107.325.3.456.877.613 2.521.54 2.592.538h.002c.667 0 1.32-.18 1.894-.519A3.84 3.84 0 0 0 16 6.819c.018-1.316-.44-2.218-.666-2.664l-.04-.08C13.963 1.487 11.106 0 8 0A8 8 0 0 0 .473 5.29C1.488 4.048 3.183 3.262 5 3.262c2.83 0 5.01 1.885 5.01 4.797h-.004v.002c0 .338-.168.832-.487 1.244l.006-.006z"/>
+        <path d="M.01 7.753a8.14 8.14 0 0 0 .753 3.641 8 8 0 0 0 6.495 4.564 5 5 0 0 1-.785-.377h-.01l-.12-.075a5.5 5.5 0 0 1-1.56-1.463A5.543 5.543 0 0 1 6.81 5.8l.01-.004.025-.012c.208-.098.62-.292 1.167-.285q.194.001.384.033a4 4 0 0 0-.993-.698l-.01-.005C6.348 4.282 5.199 4.263 5 4.263c-2.44 0-4.824 1.634-4.99 3.49m10.263 7.912q.133-.04.265-.084-.153.047-.307.086z"/>
+        <path d="M10.228 15.667a5 5 0 0 0 .303-.086l.082-.025a8.02 8.02 0 0 0 4.162-3.3.25.25 0 0 0-.331-.35q-.322.168-.663.294a6.4 6.4 0 0 1-2.243.4c-2.957 0-5.532-2.031-5.532-4.644q.003-.203.046-.399a4.54 4.54 0 0 0-.46 5.898l.003.005c.315.441.707.821 1.158 1.121h.003l.144.09c.877.55 1.721 1.078 3.328.996"/>
+      </svg>    
+      <input type="url" placeholder="Website Url">
+    </div>
+    <div class="input-group-single">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 0H3C1.34 0 0 1.34 0 3v18c0 1.66 1.34 3 3 3h18c1.66 0 3-1.34 3-3V3c0-1.66-1.34-3-3-3zm-11.34 20H5V9h4.66v11zm-2.33-12.29c-1.5 0-2.33-.98-2.33-2.21 0-1.23.85-2.21 2.19-2.21 1.5 0 2.33.98 2.33 2.21 0 1.23-.85 2.21-2.19 2.21zM20 20h-4.66v-5.59c0-2.7-3.34-2.5-3.34 0V20H7.34V9H12v1.5c1.02-1.87 6-2.03 6 2.25V20z" fill="white"/>
+      </svg>      
+      <input type="url" placeholder="Linkedin Url">
+    </div>
+    <div class="input-group-single">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 16.5c-1.23 0-2.42-.2-3.55-.58a1.99 1.99 0 00-1.89.23l-2.2 1.1a16.88 16.88 0 01-7.62-7.62l1.1-2.2a2 2 0 00.23-1.89A11.94 11.94 0 017.5 3c0-1.1-.9-2-2-2H3c-1.1 0-2 .9-2 2C1 15.93 8.07 23 17 23c1.1 0 2-.9 2-2v-2.5c0-1.1-.9-2-2-2z" fill="white"/>
+      </svg>      
+      <input type="tel" name="phone" placeholder="Contact Number" >
+    </div>
+    <div class="input-group-single">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.75 2h8.5C18.66 2 20 3.34 20 4.75v14.5C20 20.66 18.66 22 17.25 22h-8.5C5.34 22 4 20.66 4 19.25V4.75C4 3.34 5.34 2 7.75 2zm7.25 3h-1.5a.75.75 0 010-1.5h1.5a.75.75 0 010 1.5zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2.75a2.25 2.25 0 110 4.5 2.25 2.25 0 010-4.5z" fill="white"/>
+      </svg>      
+      <input type="url" name="website"  placeholder="Instagram Url">
+    </div>
+    <div class="input-group-single">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12.067C0 18.033 4.333 22.994 10 24V15.333H7V12H10V9.333C10 6.333 11.933 4.667 14.667 4.667C15.533 4.667 16.467 4.8 17.333 4.933V8H15.8C14.333 8 14 8.733 14 9.667V12H17.2L16.667 15.333H14V24C19.667 22.994 24 18.034 24 12.067C24 5.43 18.6 0 12 0C5.4 0 0 5.43 0 12.067Z" fill="white"/>
+      </svg>      
+      <input type="url" name="facebook"  placeholder="Facebook Url">
+    </div>
+    <div class="input-group-single">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 3.5v9.484c-.313-.06-.63-.086-.947-.08-2.113.037-3.8 1.755-3.8 3.878s1.687 3.841 3.8 3.878c2.048.035 3.74-1.462 3.994-3.442.025-.193.038-.388.038-.583V8.48c.855.623 1.898 1.07 3.035 1.247V6.938c-.872-.014-1.707-.321-2.365-.874-.659-.553-1.097-1.306-1.251-2.134H9zM9 18.21c-1.01-.031-1.821-.847-1.821-1.852 0-1.02.82-1.85 1.83-1.85.205 0 .41.034.606.101v2.51c-.048.64-.585 1.137-1.226 1.191h-.39z" fill="white"/>
+      </svg>           
+      <input type="url" name="tiktok"  placeholder="Tiktok Url">
+      
+    </div>
+    <div class="button-container">
+      <button class="serve-button">
+        <svg class="serve-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M21 3H3C2.45 3 2 3.45 2 4V20C2 20.55 2.45 21 3 21H21C21.55 21 22 20.55 22 20V4C22 3.45 21.55 3 21 3ZM20 19H4V5H20V19ZM12 17L8 13H11V9H13V13H16L12 17Z"/>
+        </svg>
+        SERVE LINKS
+      </button>
+    </div>
+  </div>
+  <script>
+    let zoomLevel = 1;
+    function zoomImage(zoomFactor) {
+      zoomLevel += zoomFactor;
+      document.getElementById('profileImage').style.transform = `scale(${zoomLevel})`;
+    }
+
+    document.getElementById('uploadInput').addEventListener('change', function (event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          document.getElementById('profileImage').src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
+</body>
+</html>

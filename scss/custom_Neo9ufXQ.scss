@@ -1,0 +1,146 @@
+/* 
+Compile this file to css/custom_Neo9ufXQ.css using any SCSS preprocessor. 
+More information here: https://slides.gitbook.io/manual/scss
+*/
+
+@import "mixins.scss"; 
+@import "variables.scss";
+@import "variables-custom.scss";
+
+/* FREE TRIAL (#1) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-28-1347fb0e"] */
+.slide[data-cid="slide-28-1347fb0e"]{
+  @include media($phablet, min) {
+    .iphone-28 {
+      margin-top: -228px;
+      margin-bottom: -228px;
+    }
+  }
+  @include media($phablet, max) {
+    .cell-28 {
+      padding-bottom: 35px;
+    }
+  }
+}
+
+/* PRICING 1 (#2) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-169-33f4d8f7"] */
+.slide[data-cid="slide-169-33f4d8f7"]{
+  .box-169{
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.101421), 0px 1px 4px rgba(0, 0, 0, 0.101421);
+  }
+  .list-169{
+    li{
+      position:relative;
+      padding-left:34px;
+      &:before{
+        content:'';
+        position:absolute;
+        left:0;
+        top:0;
+        height: 24px;
+        width: 24px; 
+        border-radius: 50%;
+        background: rgba($blue, 0.1) url('../assets/svg/check-bold.svg') 50% 50% no-repeat;
+        background-size: 10px;
+      }
+    }
+  }
+}
+
+/* PRICING 2 (#3) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-169-cc0a894d"] */
+.slide[data-cid="slide-169-cc0a894d"]{
+  .box-169{
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.101421), 0px 1px 4px rgba(0, 0, 0, 0.101421);
+  }
+  .list-169{
+    li{
+      position:relative;
+      padding-left:34px;
+      &:before{
+        content:'';
+        position:absolute;
+        left:0;
+        top:0;
+        height: 24px;
+        width: 24px; 
+        border-radius: 50%;
+        background: rgba($blue, 0.1) url('../assets/svg/check-bold.svg') 50% 50% no-repeat;
+        background-size: 10px;
+      }
+    }
+  }
+}
+
+/* PRICING 2 (#4) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-150-619b417d"] */
+.slide[data-cid="slide-150-619b417d"]{
+  .price {
+    font-size: 110px;
+    line-height: 1.26;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+  .currency {
+    font-size: 32px;
+    vertical-align: super;
+    font-weight: 300;
+    padding-right: 10px;
+    margin-left: -0.8em;
+    font-weight: 300;
+    opacity: 0.6;
+    position: relative;
+    top: -0.5em;
+  }
+}
+
+/* STEPS (#5) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-165-1af72a1a"] */
+.slide[data-cid="slide-165-1af72a1a"]{
+  .inner-165{
+    border-radius: 0 $rounded-border-radius $rounded-border-radius 0;
+    @include media($phablet, max) {
+      border-radius: 0 0 $rounded-border-radius $rounded-border-radius;
+    }
+  }
+  .video-165{
+    border-radius: $rounded-border-radius 0 0 $rounded-border-radius;
+    @include media($phablet, max) {
+      border-radius: $rounded-border-radius $rounded-border-radius 0 0;
+    }
+  }
+  .img-165, .videoThumbnail-165{
+    height:100%;
+  }
+  .img-165{
+    max-width:unset;
+  }
+  .box-165{
+    .button{
+      border-radius: 100px;
+    }
+    &:before{
+      content:'';
+      position: absolute;
+      left:0;
+      right:0;
+      top: 50%;
+      border-bottom: 1px solid rgba(#F2F2F2, 0.3);
+    }
+    @include media($phone, max) {
+      &:before{
+        content:'';
+        left:50%;
+        top: 0;
+        bottom:0;
+        right:unset;
+        border-bottom: none;
+        border-right: 1px solid rgba(#F2F2F2, 0.3);
+      }   
+    }
+  }
+  &.whiteSlide .box-165:before{
+    border-color:#F2F2F2;
+  }
+}

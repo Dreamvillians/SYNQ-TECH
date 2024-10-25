@@ -1,0 +1,41 @@
+/* 
+Compile this file to css/custom_ASmUHcGy.css using any SCSS preprocessor. 
+More information here: https://slides.gitbook.io/manual/scss
+*/
+
+@import "mixins.scss"; 
+@import "variables.scss";
+@import "variables-custom.scss";
+
+/* Panel Top 01 */
+.panel .sections>div{
+    height:auto;
+}
+.panel .sections .menu .noText{
+    font-size: 0 !important;
+}
+.panel.top{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.app-panel-top-links a{
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    opacity:0.5 !important;
+}
+.app-panel-top-links a:hover{
+    opacity:1 !important;
+}
+.app-logo{
+    line-height:30px;
+}
+
+/* Panel Bottom 01 */
+.panel.bottom{
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.app-panel-bottom-links{
+  letter-spacing: 0.12em;
+}
+.app-panel-bottom-links a:hover{
+  color:#202020 !important;
+}
